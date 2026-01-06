@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Registration Form</h2>
+
+        <div id="topError" class="top-error"></div>
+        <div id="successMsg" class="success"></div>
+
+        <form id="regForm">
+
+            <label>First Name*</label>
+            <input type="text" id="fname">
+            <span class="error" id="fnameErr"></span>
+
+            <label>Last Name*</label>
+            <input type="text" id="lname">
+            <span class="error" id="lnameErr"></span>
+
+            <label>Email*</label>
+            <input type="email" id="email">
+            <span class="error" id="emailErr"></span>
+
+            <label>Country*</label>
+            <select id="country">
+                <option value="">Select</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+                <option value="Australia">Australia</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="Japan">Japan</option>
+            </select>
+
+            <label>Phone*</label>
+            <div style="display:flex; gap:5px;">
+                <input type="text" id="countryCode" value="+91" readonly style="width:30%;">
+                <input type="text" id="phone" placeholder="Phone number">
+            </div>
+            <span class="error" id="phoneErr"></span>
+
+            <label>State*</label>
+            <input type="text" id="state">
+            <span class="error" id="stateErr"></span>
+
+            <label>City*</label>
+            <input type="text" id="city">
+            <span class="error" id="cityErr"></span>
+
+            <label>Gender*</label>
+            <select id="gender">
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <span class="error" id="genderErr"></span>
+
+            <label>Password*</label>
+            <input type="password" id="password">
+            <span id="strength" class="strength"></span>
+
+            <label>Confirm Password*</label>
+            <input type="password" id="confirmPassword">
+            <span class="error" id="confirmErr"></span>
+
+
+            <label>
+                <input type="checkbox" id="terms"> I accept Terms & Conditions*
+            </label>
+            <span class="error" id="termsErr"></span>
+
+            <button type="submit" id="submitBtn">Register</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #d07fb9, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Card */
+.container {
+    width: 420px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    margin: 6px 0 12px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 6px rgba(102, 126, 234, 0.4);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(118, 75, 162, 0.4);
+}
+
+button:disabled {
+    background: #b5b5b5;
+    cursor: not-allowed;
+}
+
+/* Errors & Messages */
+.error {
+    color: #e63946;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+.top-error {
+    color: #e63946;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: #2a9d8f;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Password Strength */
+#strength {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Checkbox */
+label input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Password strength styles */
+.strength {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.strength.weak {
+    color: #e63946; /* red */
+}
+
+.strength.medium {
+    color: #f4a261; /* orange */
+}
+
+.strength.strong {
+    color: #2a9d8f; /* green */
+}
